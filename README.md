@@ -2,22 +2,31 @@
 
 **A modern desktop interface for the original MAPMAKER/EXP 3.0b.**
 
-Developed with AI-assisted implementation.
+Developed by `joedfelipe` with AI-assisted implementation.
 
-EzMapMaker keeps MapMaker's typed-command workflow and adds selectable scrollback, a resizable window, project-folder selection, command history, light/dark themes, and a built-in guide and citation. It runs the original DOS executable through a bundled js-dos/DOSBox engine.
+Features:
+- typed-command workflow
+- scrollable and resizable window
+- project-folder selection
+- command history
+- light/dark themes, 
+- built-in guide and citation
+- runs the original DOS executable through a bundled js-dos/DOSBox engine
 
-## Download
+## Download and install
 
-Get a platform-specific ZIP from [GitHub Releases](https://github.com/joedfelipe/ezmapmaker/releases). Release downloads will appear there once published. GitHub's automatic “Source code” archives are developer downloads, not runnable apps.
+Download ZIP installers from [GitHub Releases](https://github.com/joedfelipe/ezmapmaker/releases). 
 
 - **Apple Silicon Mac:** choose `mac-arm64`, unzip, and move `EzMapMaker.app` to Applications.
 - **Intel Mac:** choose `mac-x64` and follow the same steps.
 - **Windows 64-bit:** extract the complete `windows-x64` ZIP and open `EzMapMaker.exe`. Keep its accompanying folders together.
 
-Standalone packages include the runtime and engine: users do not need Node.js, DOSBox, or an internet connection. Local Mac builds are ad-hoc signed, not notarized; Windows builds are unsigned. On Mac, use the system's **Privacy & Security → Open Anyway** option if blocked. Windows may show SmartScreen. Only open packages from a trusted source.
+Standalone packages include the runtime and engine: users do not need Node.js, DOSBox, or an internet connection. 
+
+Note: On Mac, use the system's **Privacy & Security → Open Anyway** option if blocked. Windows may show SmartScreen. Only open packages from a trusted source.
 
 
-## Use
+## How to use
 
 1. Put your `.RAW` file in a project folder. Use a DOS 8.3 filename, for example `MYDATA.RAW`; the host folder path can contain spaces.
 2. Click **Open project folder** and select that folder.
