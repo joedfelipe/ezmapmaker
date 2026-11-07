@@ -1,0 +1,28 @@
+{
+  "name": "mapmaker-console",
+  "version": "0.2.1",
+  "private": true,
+  "description": "EzMapMaker desktop console for the original MAPMAKER/EXP 3.0b",
+  "main": "app/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "preview": "electron . --preview",
+    "test": "node --test tests/*.test.cjs",
+    "prepare:dos": "node scripts/prepare-dos.cjs",
+    "postinstall": "node scripts/prepare-dos.cjs",
+    "package:mac": "npm run prepare:release && electron-builder --mac zip --arm64 --x64",
+    "package:windows": "npm run prepare:release && electron-builder --win zip --x64",
+    "package:all": "npm run package:mac && npm run package:windows",
+    "prepare:release": "npm run prepare:dos && node scripts/prepare-release.cjs"
+  },
+  "devDependencies": {
+    "electron": "45.0.0",
+    "electron-builder": "26.18.0",
+    "playwright": "1.61.1"
+  },
+  "dependencies": {
+    "emulators": "8.5.2"
+  },
+  "author": "JLFelipe",
+  "license": "GPL-2.0-only"
+}

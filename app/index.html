@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'"><title>EzMapMaker</title><link rel="stylesheet" href="style.css"></head><body>
+<header><h1>EzMapMaker</h1><div class="header-actions"><button id="about" class="about-button" type="button" aria-haspopup="dialog">About</button><button id="dark-mode" class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">Dark mode</button><button id="open">Open project folder</button></div></header>
+<main id="terminal" tabindex="0" aria-label="MapMaker terminal"><pre><span id="output"></span><input id="command" aria-label="MapMaker command" autocomplete="off" autocapitalize="off" spellcheck="false" hidden disabled></pre></main>
+<dialog id="about-dialog" aria-labelledby="about-title">
+  <h2 id="about-title">EzMapMaker</h2>
+  <p id="about-version" class="about-muted"></p>
+  <p class="developer-credit">Developed by <strong>John Edward L. Felipe</strong>, with AI-assisted implementation.</p>
+  <p>A modern desktop interface for the original MAPMAKER/EXP 3.0b.</p>
+  <details id="usage-guide">
+    <summary>How to use</summary>
+    <ol>
+      <li><strong>Prepare your folder.</strong> Put your <code>.RAW</code> file in a project folder. Use a short filename such as <code>BSRR.RAW</code>: up to eight characters before the extension, without spaces.</li>
+      <li><strong>Open the project.</strong> Click <strong>Open project folder</strong> and select that folder. MapMaker starts automatically.</li>
+      <li><strong>Enter commands.</strong> At the prompt, type <code>prepare bsrr.raw</code> (using your filename) and press Enter. Continue with your laboratory instructions. Type <code>help</code> for MapMaker command help.</li>
+      <li><strong>Find your results.</strong> Files written by MapMaker are saved in the same project folder. A <code>.PS</code> file appears after a drawing command creates it.</li>
+      <li><strong>Save and finish.</strong> Type <code>quit</code>, then press Enter or type <code>y</code> at the save prompt.</li>
+    </ol>
+    <p>Scroll to review output; select text to copy. Use ↑ / ↓ for command history and Cmd/Ctrl + or − to adjust text size.</p>
+    <p>Add data files before opening a project. If you add a file later, quit and reopen the folder to import it.</p>
+  </details>
+  <h3>How to cite EzMapMaker</h3>
+  <p id="citation" class="citation"></p>
+  <p class="about-muted">Cite the original MAPMAKER software as well when reporting linkage analyses.</p>
+  <details>
+    <summary>Software credits</summary>
+    <p>MapMaker source reference: <a id="mapmaker-source" href="https://github.com/kentavv/mapmaker">kentavv/mapmaker on GitHub</a>.</p>
+    <p>Lander, E., Green, P., Abrahamson, J., Barlow, A., Daly, M., Lincoln, S., &amp; Newburg, L. (1987). MAPMAKER: An interactive computer package for constructing primary genetic linkage maps of experimental and natural populations. <em>Genomics, 1</em>, 174–181.</p>
+  </details>
+  <p id="copy-status" class="about-muted" role="status" aria-live="polite"></p>
+  <div class="about-actions"><button id="copy-citation" class="theme-toggle" type="button">Copy citation</button><button id="close-about" type="button" autofocus>Close</button></div>
+  <p class="about-copyright">Copyright ©️ 2026. All rights reserved.</p>
+</dialog>
+<script src="renderer.js"></script></body></html>

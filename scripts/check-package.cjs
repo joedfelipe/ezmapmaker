@@ -1,0 +1,11 @@
+const fs=require('node:fs');
+const path=require('node:path');
+const assert=require('node:assert/strict');
+const crypto=require('node:crypto');
+const root=path.resolve(process.argv[2]);
+const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+for(const file of ['app/main.cjs','app/dos-worker.cjs','app/dos-session.cjs','app/preload.cjs','app/index.html','app/style.css','app/renderer.js','engine/dos/wdosbox.js','engine/dos/wdosbox.wasm','node_modules/emulators/dist/emulators.js'])assert.ok(fs.statSync(path.join(root,'app',file)).size>0,file);
+for(const file of ['MAPMBIN.EXE','DOS4GW.EXE','MAPMAKER.BAT','MAPM.VMC','MAPMAKER.HLP','read.me'])assert.equal(hash(path.join(root,'app/mapmaker',file)),hash(path.join('mapmaker',file)),file);
+for(const file of ['START-HERE.txt','THIRD-PARTY-NOTICES.txt','source/emulators-8.5.2.tar.gz','source/dosbox-528578d5.tar.gz',`source/ezmapmaker-${require('../package.json').version}-source.tar.gz`])assert.ok(fs.statSync(path.join(root,'distribution',file)).size>0,file);
+assert.ok(!fs.existsSync(path.join(root,'app/engine/build')),'Native port must not be included');
+console.log('PASS: packaged app includes original engine, DOS runtime, WASM bridge, runtime dependencies, guide, licenses and source.');

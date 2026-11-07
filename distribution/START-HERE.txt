@@ -1,0 +1,45 @@
+EzMapMaker 0.2.1
+
+This standalone app includes Electron, a DOSBox WebAssembly engine, and the
+original MAPMAKER/EXP 3.0b package. No Node.js, DOSBox, compiler or internet
+connection is required to run it.
+
+MAC
+Choose mac-arm64 for Apple Silicon (M1/M2/M3/M4 and newer), or mac-x64 for
+Intel. Unzip, then drag EzMapMaker.app to Applications. Open EzMapMaker.
+This local build is ad-hoc signed, not Apple-notarized. If macOS blocks it,
+use System Settings > Privacy & Security > Open Anyway after attempting
+launch. Do not disable Gatekeeper globally.
+
+WINDOWS
+Unzip the Windows x64 archive into its own folder. Open EzMapMaker.exe.
+Keep all files and folders together; the EXE is not a single-file app.
+You may move the whole folder to a convenient location and make a shortcut.
+This build is unsigned and may trigger Windows SmartScreen. Only proceed
+with a copy you obtained from the instructor. Requires 64-bit Windows.
+
+DATA AND OUTPUTS
+Create a project folder, put your .RAW data there, then click Open project
+folder in the app. Use short DOS filenames, such as BSRR.RAW (eight characters
+before the extension, no spaces). The project folder path may contain spaces.
+For the sample data: prepare bsrr.raw / sequence all / group, entered as three
+separate commands. Scroll to review output; select text to copy. Use arrow
+keys for command history. Cmd/Ctrl plus/minus changes the font size.
+
+MapMaker writes .DAT, .MAP, .2PT, .OUT and .PS files as requested by its
+commands. Files it writes are copied back into the same selected project
+folder. Type quit, then answer its save prompt to save analysis in memory.
+If you add data after opening a project, end the session and reopen the folder.
+Never use the app's installed program folder as your project folder.
+
+LICENSES AND SOURCE
+The complete supplied MAPMAKER package and its license are included under
+app/mapmaker in the app resources. MAPMAKER keeps its original license.
+EzMapMaker's wrapper and the DOS emulator use GPL version 2. Corresponding
+wrapper source, the matching emulator/DOSBox sources, build scripts, and
+notices are included in Resources/distribution (macOS) or
+resources/distribution (Windows). Electron's notices are included separately.
+
+The Apple Silicon app is tested end-to-end. The Intel Mac app also passed
+under Rosetta on an Apple Silicon Mac. The Windows archive is cross-built
+and inspected; it still needs a test on Windows before classroom rollout.

@@ -1,0 +1,28 @@
+EzMapMaker uses the supplied, unmodified MAPMAKER/EXP 3.0b executable.
+Copyright 1987-1992 Whitehead Institute for Biomedical Research.
+All original license terms, credits, and supplied distribution files are
+preserved in app/mapmaker, including QTL and Ghostscript files. Only EXP is
+connected to the EzMapMaker interface. See app/mapmaker/read.me and COPYING.
+
+DOS emulation: emulators 8.5.2, https://github.com/js-dos/emulators
+Exact npm gitHead: 6bbf0925d221a7304ea8e0dda1e89b8dc01569b2
+DOSBox core: https://github.com/js-dos/dosbox
+Exact submodule commit: 528578d5a6f76afd4d5ef4e722b5670826f1183a
+License: GNU GPL version 2. See app/engine/dos/LICENSE.
+
+The DOSBox JavaScript wrapper is modified by scripts/prepare-dos.cjs to
+expose its existing partial stdout buffer; neither WASM nor MapMaker binaries
+are modified. The matching upstream source archives, patch-generation script,
+wrapper source and lockfile are included in distribution/source. To rebuild
+the emulator, extract its repository and the DOSBox core at native/dosbox,
+then follow the emulator repository's pinned build toolchain/scripts. To
+rebuild EzMapMaker's wrappers, use npm ci and the package scripts. Supply
+the separately licensed original package in the local mapmaker/ folder as
+described in README.md; it is not part of the public source checkout.
+
+EzMapMaker wrapper/build source: GPL-2.0-only, included with this distribution.
+MAPMAKER and other bundled components retain their respective licenses.
+
+Electron: https://github.com/electron/electron — MIT, with Chromium and other
+third-party notices included in each platform runtime. Runtime npm packages
+include their own licenses in app/node_modules.

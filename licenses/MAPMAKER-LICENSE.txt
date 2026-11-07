@@ -1,0 +1,62 @@
+MAPMAKER/EXP 3.0 and MAPMAKER/QTL 1.1
+Copyright 1992 Whitehead Institute for Biomedical Research
+
+(5) LICENSE AGREEMENT
+
+The MAPMAKER package, including both the MAPMAKER version 3.0 and MAPMAKER/QTL
+version 1.1 programs, all associated files, source code, and documentation
+(herein referred to collectively as MAPMAKER) are distributed under the
+following license terms at no charge. Installation of the program on any
+computer or any use of the program implies that the user and the user's
+organization (herein referred to as "you") agree to the following terms:
+
+(1) Warranty, or lack thereof: These programs are provided on an "as is"
+basis, with no warranty of any type, including warranty of suitability for any
+particular purpose or ability to function correctly on any type of computer. No
+technical support can be guaranteed.
+
+(2) Right to Use: You are provided with a license to use MAPMAKER for "basic
+research purposes" as defined by the Whitehead Institute for Biomedical
+Research. Generally speaking, most mapping efforts are considered "basic
+research" unless the sale of either mapped markers or (putative) genes or the
+sale of mapping services using the MAPMAKER programs is involved. Also
+generally speaking, the sale of particular lines or strains developed through
+the indirect use of the MAPMAKER programs is granted. Commercial groups should
+consult us as to the specific the legalities covering the use of MAPMAKER for
+their project(s). We will work out licensing such efforts on a case by case
+basis, and our intention is to see such agreements worked out and to do so
+quickly.
+
+(3) Redistribution Rights: The Whitehead Institute grants you permission to
+copy MAPMAKER, both for distribution to individuals within your organization
+and to those outside the organization. However, all of the software, files, and
+documentation must be provided and the software must be copied in its entirety
+preserving, among other things, copyright notices, credits, and license
+agreement. (One reason behind this is that MAPMAKER and MAPMAKER/QTL are a
+synchronized distribution, and only versions of the software, documentation,
+and other files delivered together from the Whitehead Institute are guaranteed
+to work with each other.) You may charge a small fee for the media and the
+physical act of copying the software and documentation, not to exceed US$250,
+but all persons who receive the software do so under this license agreement
+alone and thus you may not charge for the software itself or restrict any
+recipient's right to further distribute the version you give to them.
+
+(4) Modification Rights: The Whitehead Institute grants you permission to
+modify MAPMAKER and to distribute modified versions, both to individuals within
+your organization and to those outside your organization. However, you must (a)
+preserve all of the original copyright notices, license agreement, and credits
+in both the software and documentation, (b) add your own notice, making it
+immediately apparent upon running the program that it's a modified version, (c)
+include the unmodified version in its entirety (as described above) along with
+the modified version; (d) distribute the modified version under the same
+licensing conditions as the original (e.g. under this agreement); and (e)
+notify us in writing that you are distributing a modified version and provide
+us with full source code to the modified version immediately upon request.
+These restrictions may be waived in some cases by The Whitehead Institute --
+contact us for details. Note that this agreement prohibits selling even
+modified versions of the MAPMAKER package without our permission. Modified
+versions of MAPMAKER distributed for internal use only within a specific
+organization are not subject to terms (c), (d), and (e), above.
+
+Other software may be included with MAPMAKER, which may have its own copyrights
+and license restrictions. Check the documentation for details.

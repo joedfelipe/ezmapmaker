@@ -1,0 +1,34 @@
+appId: ph.edu.uplb.ezmapmaker
+productName: EzMapMaker
+asar: false
+npmRebuild: false
+buildDependenciesFromSource: false
+directories:
+  output: release
+  buildResources: build
+files:
+  - app/**/*
+  - engine/dos/**/*
+  - mapmaker/**/*
+  - package.json
+  - LICENSE
+  - '!**/.DS_Store'
+  - '!**/Icon?'
+  - '!node_modules/emulators/dist/wdosbox*'
+  - '!node_modules/emulators/dist/*.map'
+  - '!node_modules/emulators/scripts/**/*'
+extraResources:
+  - from: distribution
+    to: distribution
+mac:
+  target: zip
+  category: public.app-category.education
+  icon: build/icon.icns
+  identity: '-'
+  hardenedRuntime: false
+  artifactName: EzMapMaker-${version}-mac-${arch}.${ext}
+win:
+  target: zip
+  icon: build/icon.ico
+  signExecutable: false
+  artifactName: EzMapMaker-${version}-windows-${arch}.${ext}

@@ -1,0 +1,40 @@
+# Dependencies, generated emulator binaries, packages and screenshots
+node_modules
+engine/
+release/
+dist/
+artifacts/
+distribution/source/
+build/icon.iconset/
+
+# Local original engine package, earlier experiments and course projects
+mapmaker/
+vendor/
+projects/
+
+# Installers, downloadable archives, datasets and analysis outputs
+*.exe
+*.dmg
+*.zip
+*.tar.gz
+*.[rR][aA][wW]
+*.[dD][aA][tT]
+*.[mM][aA][pP]
+*.[oO][uU][tT]
+*.[pP][sS]
+*.2PT
+*.2pt
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.swp
+
+# Local credentials and OS/editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+Icon?
+*.log
+.vscode/
