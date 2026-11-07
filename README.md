@@ -2,7 +2,7 @@
 
 **A modern desktop interface for the original MAPMAKER/EXP 3.0b.**
 
-Developed by **John Edward L. Felipe**, with AI-assisted implementation.
+Developed with AI-assisted implementation.
 
 EzMapMaker keeps MapMaker's typed-command workflow and adds selectable scrollback, a resizable window, project-folder selection, command history, light/dark themes, and a built-in guide and citation. It runs the original DOS executable through a bundled js-dos/DOSBox engine.
 
@@ -16,7 +16,6 @@ Get a platform-specific ZIP from [GitHub Releases](https://github.com/joedfelipe
 
 Standalone packages include the runtime and engine: users do not need Node.js, DOSBox, or an internet connection. Local Mac builds are ad-hoc signed, not notarized; Windows builds are unsigned. On Mac, use the system's **Privacy & Security → Open Anyway** option if blocked. Windows may show SmartScreen. Only open packages from a trusted source.
 
-Version **0.2.1** was tested on Apple Silicon and under Rosetta for Intel Mac. Windows was cross-built and inspected but has not yet been launch-tested on Windows.
 
 ## Use
 
@@ -30,70 +29,6 @@ Scroll to review output and select text to copy. Up/down recall commands. Cmd/Ct
 
 The folder is imported at session start. If you add files later, quit and reopen it. Avoid simultaneous edits in another app or another session. File deletions in DOS are not propagated. Only DOS-compatible regular filenames are imported; hidden files, subdirectories and symbolic links are skipped. Files written by MapMaker are synchronized approximately every 1.2 seconds and on normal exit.
 
-## Develop locally
-
-Use Node.js 22 or newer and npm. Clone the repository, then:
-
-```sh
-npm ci
-npm start
-```
-
-`npm ci` prepares the pinned emulator bridge locally. The UI can open without a MapMaker package; starting a mapping session requires the original engine below.
-
-### Supply the original engine
-
-The original MapMaker runtime, personal/course datasets, generated binaries and old installers are intentionally **not tracked in Git**. Obtain a licensed copy of the original distribution, or extract the complete `app/mapmaker` folder from a standalone EzMapMaker release:
-
-- Mac app: `EzMapMaker.app/Contents/Resources/app/mapmaker`
-- Windows package: `resources/app/mapmaker`
-
-Place the complete folder at `mapmaker/` beside this README. Keep its original files and notices. Do not substitute a build from another MapMaker source repository: this interface uses the original DOS release.
-
-The runtime requires `MAPMBIN.EXE`, `DOS4GW.EXE`, `MAPMAKER.BAT`, `MAPM.VMC`, and `MAPMAKER.HLP`. Packaging requires the complete original distribution to preserve its redistribution terms.
-
-Expected original `MAPMBIN.EXE` SHA-256:
-
-```text
-96c2067ee0df1f54d8526c99d543aad5eddfe5904614ada80040b3f489feea39
-```
-
-The local `mapmaker/` folder is ignored by Git. Never add your students' datasets or generated analysis outputs to the repository.
-
-### Verify
-
-```sh
-npm test
-node scripts/preview.cjs --test
-```
-
-Tests generate artificial F2 genotypes; no research or course dataset is committed. Engine tests report an explicit skip if the local original runtime is absent. With the engine present, they check identity, prompts, help, grouping, saving and reloading. The Electron test also checks scrollback, themes, inline input and project persistence. Screenshots go to ignored `artifacts/`.
-
-### Build standalone packages
-
-On a Mac:
-
-```sh
-npm run package:all
-```
-
-Or build separately:
-
-```sh
-npm run package:mac
-npm run package:windows
-```
-
-The build first refreshes the corresponding wrapper source archive and downloads the exact pinned emulator/DOSBox source archives with SHA-256 verification. It then packages the original engine, runtime dependencies, instructions and notices. Outputs go to ignored `release/`. A Mac is required for Mac packaging; Windows ZIPs can be cross-built on Mac or built on Windows. Signing/notarization needs separate credentials.
-
-## Publishing updates
-
-1. Edit and test the source; bump the version using `npm version X.Y.Z --no-git-tag-version`.
-2. Run `npm test` and the appropriate package scripts. Inspect and test the resulting packages on their target systems.
-3. Commit and push the matching source changes.
-4. Create a GitHub Release tagged `vX.Y.Z` at that commit. Attach the platform ZIPs, instructions and checksums as release assets, not ordinary Git files.
-
-Updates are manual: users download the new package and replace the app, keeping their separate project folders. There is no automatic updater.
 
 ## Citation
 
